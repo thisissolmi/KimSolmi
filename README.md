@@ -1,40 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+🌟 PARD 5기 웹파트 OT 과제 🌟
+📌 프로젝트 개요
+자기소개 페이지를 제작하여 배포하는 프로젝트입니다.
+Next.js를 활용하여 개인 포트폴리오 형태의 소개 페이지를 만들고,
+Netlify를 통해 배포하여 누구나 볼 수 있도록 공유합니다. 🚀
 
-## Getting Started
+🎯 서비스 소개
+본 프로젝트에서는 다음과 같은 내용을 담고 있습니다:
+✅ 자기소개: 간단한 인적 사항 및 목표
+✅ 이번 학기 목표: 학습 방향과 성장 계획
+✅ 좋아하는 것: 나를 표현하는 3가지 키워드
+✅ 반응형 UI: 모바일 & 다크모드 지원
 
-First, run the development server:
+🚀 Netlify로 배포하기
+Netlify를 활용하면 쉽게 배포할 수 있습니다!
+아래 링크를 클릭하여 배포된 페이지를 확인하세요.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗 내 자기소개 페이지 보러 가기!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+// 빌드 에러가 떠가지구요..
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+<img src="./public/forreademe.png" width="400"/>
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
