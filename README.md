@@ -11,9 +11,4 @@ Netlify를 통해 배포하여 누구나 볼 수 있도록 공유합니다. 🚀
 ✅ 반응형 UI: 모바일 & 다크모드 지원
 
 
-
-
-<img src="./public/forreademe.png" width="400"/>
-
-
 ![alt text](image-1.png)
