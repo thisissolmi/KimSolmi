@@ -4,14 +4,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import localFont from "next/font/local";
 
-// ✅ Pretendard 폰트 적용
 const pretendard = localFont({
   src: "../fonts/Pretendard-Bold.otf",
   variable: "--font-pretendard",
   display: "swap",
 });
 
-// 💬 타입 선언
 type SocialType = "Instagram" | "LinkedIn" | "Tistory";
 
 interface LinkBase {
@@ -45,10 +43,8 @@ const socialLinks: SocialLink[] = [
   },
 ];
 
-// 💬 제네릭 함수
 const wrapInArray = <T,>(item: T): T[] => [item];
 
-// 💬 유틸리티 타입
 interface User {
   name: string;
   age: number;
@@ -78,11 +74,17 @@ export default function Home() {
   }, [index, content]);
 
   return (
-    // ✅ Pretendard 폰트 전체 적용
     <div
       className={`grid grid-rows-[auto_1fr_auto] items-start justify-items-center min-h-screen px-4 sm:px-8 py-8 gap-8 ${pretendard.variable} font-[var(--font-pretendard)]`}
     >
+
       <main className="flex flex-col gap-8 row-start-2 items-center w-full max-w-md">
+      <p
+          id="dynamic"
+          className="text-base sm:text-lg font-semibold whitespace-pre-line text-center"
+        >
+          {text}
+        </p>
         <Image
           className="dark:invert w-full max-w-xs sm:max-w-sm rounded-md"
           src="/thisissolmi.jpeg"
@@ -91,16 +93,34 @@ export default function Home() {
           height={400}
           priority
         />
-        <h2> My information </h2>
-
-        <p
-          id="dynamic"
-          className="text-base sm:text-lg font-semibold whitespace-pre-line text-center"
-        >
-          {text}
-        </p>
+        <h2> My favorite things </h2>
+        <Image
+          className="dark:invert w-full max-w-xs sm:max-w-sm rounded-md"
+          src="/olaf.jpeg"
+          alt="올라프"
+          width={200}
+          height={200}
+          priority
+        />
+        <Image
+          className="dark:invert w-full max-w-xs sm:max-w-sm rounded-md"
+          src="/yoshi.webp"
+          alt="요시"
+          width={200}
+          height={200}
+          priority
+        />
+        <Image
+          className="dark:invert w-full max-w-xs sm:max-w-sm rounded-md"
+          src="/icebear.png"
+          alt="아이스베어"
+          width={200}
+          height={200}
+          priority
+        />
       </main>
 
+<br></br>
       <footer className="row-start-3 flex gap-4 flex-wrap items-center justify-center text-sm">
         {socialLinks.map((link) => (
           <a
