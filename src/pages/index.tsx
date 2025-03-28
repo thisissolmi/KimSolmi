@@ -1,21 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 import { useEffect, useState } from "react";
+import localFont from "next/font/local";
 
-// 💬 폰트 설정은 그대로 둠
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// ✅ Pretendard 폰트 적용
+const pretendard = localFont({
+  src: "../fonts/Pretendard-Bold.otf",
+  variable: "--font-pretendard",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-// 💬 1️⃣ 타입 별칭과 인터페이스 상속 예시
+// 💬 타입 선언
 type SocialType = "Instagram" | "LinkedIn" | "Tistory";
 
 interface LinkBase {
@@ -28,7 +24,6 @@ interface SocialLink extends LinkBase {
   type: SocialType;
 }
 
-// 💬 2️⃣ 배열 선언 시 타입 명시
 const socialLinks: SocialLink[] = [
   {
     name: "LinkedIn",
@@ -50,10 +45,10 @@ const socialLinks: SocialLink[] = [
   },
 ];
 
-// 💬 3️⃣ 제네릭 함수 예시
+// 💬 제네릭 함수
 const wrapInArray = <T,>(item: T): T[] => [item];
 
-// 💬 4️⃣ 유틸리티 타입 활용
+// 💬 유틸리티 타입
 interface User {
   name: string;
   age: number;
@@ -61,14 +56,12 @@ interface User {
 }
 
 const updateUser = (user: Partial<User>) => {
-  // 이 함수는 일부 속성만 업데이트할 수 있음
   console.log("Updating user:", user);
 };
 
 export default function Home() {
   const content: string =
     "안녕하세요.\n 두 번째 과제입니다! 제 이름은 김솔미 입니다.\n소통하는 개발자가 되고 싶어요!\n";
-    
 
   const [text, setText] = useState<string>("");
   const [index, setIndex] = useState<number>(0);
@@ -85,7 +78,10 @@ export default function Home() {
   }, [index, content]);
 
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] items-start justify-items-center min-h-screen px-4 sm:px-8 py-8 gap-8 font-[family-name:var(--font-geist-sans)]">
+    // ✅ Pretendard 폰트 전체 적용
+    <div
+      className={`grid grid-rows-[auto_1fr_auto] items-start justify-items-center min-h-screen px-4 sm:px-8 py-8 gap-8 ${pretendard.variable} font-[var(--font-pretendard)]`}
+    >
       <main className="flex flex-col gap-8 row-start-2 items-center w-full max-w-md">
         <Image
           className="dark:invert w-full max-w-xs sm:max-w-sm rounded-md"
@@ -95,6 +91,8 @@ export default function Home() {
           height={400}
           priority
         />
+        <h2> My information </h2>
+
         <p
           id="dynamic"
           className="text-base sm:text-lg font-semibold whitespace-pre-line text-center"
@@ -104,7 +102,6 @@ export default function Home() {
       </main>
 
       <footer className="row-start-3 flex gap-4 flex-wrap items-center justify-center text-sm">
-        {/* 💬 배열 반복 렌더링 (타입 반영된 데이터 사용) */}
         {socialLinks.map((link) => (
           <a
             key={link.name}

@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
-import { Sun, Moon } from "lucide-react"; // 🌞🌙 아이콘 불러오기
+import { Sun, Moon } from "lucide-react"; 
 
 export default function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState("light");
