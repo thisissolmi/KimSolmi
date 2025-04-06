@@ -19,7 +19,6 @@ export default function RegisterPage() {
     // 서버에 가입 요청 로직 등을 추가
   };
 
-  // 로그인 클릭 시 /MyPage로 이동
   const handleLoginClick = () => {
     router.push('/mypage')
   };

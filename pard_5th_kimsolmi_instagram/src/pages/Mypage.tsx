@@ -11,7 +11,7 @@ import {
   FaBars
 } from 'react-icons/fa';
 
-export default function MyPage() {
+export default function mypage() {
   return (
     <div className={styles.container}>
       <aside className={styles.sidebar}>
@@ -65,7 +65,13 @@ export default function MyPage() {
       <main className={styles.main}>
         <div className={styles.profileHeader}>
           <div className={styles.profileImage}>
-            <div className={styles.avatar}>123</div>
+            <div className={styles.avatar}>
+              <img 
+                src="/Yes.png" 
+                alt="Profile" 
+                className={styles.avatarImage}
+              />
+            </div>
           </div>
           <div className={styles.profileInfo}>
             <div className={styles.profileNameRow}>
@@ -82,12 +88,48 @@ export default function MyPage() {
         
         <div className={styles.profileContent}>
           <div className={styles.profileGrid}>
-            <div className={styles.gridItem}>123</div>
-            <div className={styles.gridItem}>123</div>
-            <div className={styles.gridItem}>123</div>
-            <div className={styles.gridItem}>123</div>
-            <div className={styles.gridItem}>123</div>
-            <div className={styles.gridItem}>123</div>
+            <div className={styles.gridItem}>
+              <img 
+                src="/devweb.png" 
+                alt="Dev Web" 
+                className={styles.gridImage}
+              />
+            </div>
+            <div className={styles.gridItem}>
+              <img 
+                src="/post1.png" 
+                alt="Post 1" 
+                className={styles.gridImage}
+              />
+            </div>
+            <div className={styles.gridItem}>
+              <img 
+                src="/defult.png" 
+                alt="Default" 
+                className={styles.gridImage}
+              />
+            </div>
+            <div className={styles.gridItem}>
+              <img 
+                src="/defult.png" 
+                alt="Default" 
+                className={styles.gridImage}
+              />
+            </div>
+            <div className={styles.gridItem}>
+              <img 
+                src="/defult.png" 
+                alt="Default" 
+                className={styles.gridImage}
+              />
+            </div>
+            <div className={styles.gridItem}>
+              <img 
+                src="/defult.png" 
+                alt="Default" 
+                className={styles.gridImage}
+              />
+            </div>
           </div>
         </div>
       </main>
