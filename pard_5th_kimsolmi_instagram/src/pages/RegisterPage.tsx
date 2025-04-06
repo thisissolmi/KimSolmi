@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import styles from '../styles/Register.module.css';
 
-export default function Register() {
+export default function RegisterPage() {
   const router = useRouter();
 
   const [phoneOrEmail, setPhoneOrEmail] = useState('');
@@ -21,16 +21,16 @@ export default function Register() {
 
   // 로그인 클릭 시 /MyPage로 이동
   const handleLoginClick = () => {
-    router.push('/MyPage');
+    router.push('/mypage')
   };
 
   return (
     <div className={styles.pageContainer}>
-      {/* 상단 박스 */}
       <div className={styles.topContainer}>
         <div className={styles.logo}>
           <Image
-            src="/Company-logo.png" // public 폴더에 Company-logo.png가 있어야 함
+            src="/Company-logo.png" 
+
             alt="Instagram Logo"
             width={200}
             height={60}
